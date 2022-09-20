@@ -1,0 +1,92 @@
+header {
+  height: 90vh;
+  @include flex-center;
+}
+
+.main-header {
+  height: 60vh;
+  color: $color-1;
+
+  & h1 {
+    font-size: clamp(3rem, 5vw, 9rem);
+    padding: 90px 0 0px;
+    font-weight: bold;
+
+    &::selection{
+      color: $color-3;
+      background: $color-2;
+    }
+  }
+
+  & p {
+    font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+    font-weight: 500;
+    padding: 50px 0;
+    font-style: italic;
+  }
+}
+
+//ICON FLECHE DU BAS
+.icon-header {
+  width: 70px;
+  height: 70px;
+  margin: 0px auto;
+  border: 1px solid;
+  border-radius: 50px;
+  position: relative;
+
+  & i {
+    color: $color-1;
+    font-size: clamp(0.9rem, 1vw, 1.1rem);
+    @include position-abs-center;
+  }
+}
+
+//NAV
+nav {
+  border: 1px solid red;
+  @include flex-between;
+  background: $color-3;
+  color: $color-1;
+}
+
+.nav-left {
+  border: 1px solid black;
+  width: 50%;
+  height: 10vh;
+  transition: 0.5s ease;
+
+  &:hover li:not(:hover){
+    background: $color-3;
+    color: $color-1;
+  }
+}
+
+.nav-left{
+  & ul {
+    height: 100%;
+    border: 1px solid black;
+    display: flex;
+    font-size: clamp(0.5rem, 1.1vw, 1.2rem);
+    font-weight: 600;
+    cursor: pointer;
+
+    & li {
+      width: 100%;
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:first-child {
+        background: $color-1;
+        color: $color-2;
+      }
+
+      &:hover {
+        background: $color-1;
+        color: $color-2;
+      }
+    }
+  }
+}

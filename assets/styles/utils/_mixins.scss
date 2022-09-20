@@ -1,0 +1,25 @@
+//FLEX-BLOC
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+}
+
+//GRID
+@mixin grid-col50 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+//POSITION ABSOLUTE
+@mixin position-abs-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate:(-50% -50%);
+}

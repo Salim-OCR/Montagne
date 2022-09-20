@@ -1,0 +1,13 @@
+//IMPORTATIONS DE FICHIERS SASS
+@import './settings/fondationts';
+@import './utils/variables';
+@import './utils/mixins';
+@import './layout/header';
+
+//Paramètre du body
+body{
+    width: 75%;
+    margin: 0 auto;
+    background: url(../images/bg.jpg) fixed center/cover;
+    text-align: center;
+}

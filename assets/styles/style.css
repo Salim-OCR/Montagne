@@ -1,0 +1,122 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+.nav-left,
+button,
+label,
+input[type=button] {
+  text-transform: uppercase;
+}
+
+a,
+a:visited {
+  color: black;
+}
+
+header {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-header {
+  height: 60vh;
+  color: rgb(239, 234, 234);
+}
+.main-header h1 {
+  font-size: clamp(3rem, 5vw, 9rem);
+  padding: 90px 0 0px;
+  font-weight: bold;
+}
+.main-header h1::-moz-selection {
+  color: rgba(229, 229, 229, 0.637);
+  background: rgb(22, 22, 22);
+}
+.main-header h1::selection {
+  color: rgba(229, 229, 229, 0.637);
+  background: rgb(22, 22, 22);
+}
+.main-header p {
+  font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+  font-weight: 500;
+  padding: 50px 0;
+  font-style: italic;
+}
+
+.icon-header {
+  width: 70px;
+  height: 70px;
+  margin: 0px auto;
+  border: 1px solid;
+  border-radius: 50px;
+  position: relative;
+}
+.icon-header i {
+  color: rgb(239, 234, 234);
+  font-size: clamp(0.9rem, 1vw, 1.1rem);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+nav {
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  background: rgba(229, 229, 229, 0.637);
+  color: rgb(239, 234, 234);
+}
+
+.nav-left {
+  border: 1px solid black;
+  width: 50%;
+  height: 10vh;
+  transition: 0.5s ease;
+}
+.nav-left:hover li:not(:hover) {
+  background: rgba(229, 229, 229, 0.637);
+  color: rgb(239, 234, 234);
+}
+
+.nav-left ul {
+  height: 100%;
+  border: 1px solid black;
+  display: flex;
+  font-size: clamp(0.5rem, 1.1vw, 1.2rem);
+  font-weight: 600;
+  cursor: pointer;
+}
+.nav-left ul li {
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-left ul li:first-child {
+  background: rgb(239, 234, 234);
+  color: rgb(22, 22, 22);
+}
+.nav-left ul li:hover {
+  background: rgb(239, 234, 234);
+  color: rgb(22, 22, 22);
+}
+
+body {
+  width: 75%;
+  margin: 0 auto;
+  background: url(../images/bg.jpg) fixed center/cover;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

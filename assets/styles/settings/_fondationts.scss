@@ -1,0 +1,23 @@
+// paramètres généraux
+*,
+::after,
+::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    list-style-type: none;
+}
+h1,
+h2,
+h3,
+.nav-left,
+button,
+label,
+input[type="button"]{
+    text-transform: uppercase;
+}
+a,
+a:visited{
+    color: black;
+}
