@@ -1,42 +1,62 @@
-.section1{
-    height: 120vh;
-    border: 1px solid red;
+//BARRE BEFORE AFTER
+#txt-barre {
+  width: 100%;
+  padding: 50px 0 0;
+  margin-bottom: 50px;
+  font-size: clamp(0.8rem, 1.5vw, 2.5rem);
+  font-weight: lighter;
+  text-transform: capitalize;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    border: 1px solid $color-3;
+    width: 30%;
+    top: 80%;
+    left: 8%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    border: 1px solid $color-3;
+    width: 30%;
+    top: 80%;
+    right: 8%;
+  }
 }
-.txt-up{
-    width: 85%;
-    margin: 0 auto;
-    border: 1px solid rgb(93, 0, 255);
+//H2
+.txt-up {
+  width: 60%;
+  margin: 0 auto;
 
-    & #txt-barre{
-        width: 100%;
-        border: 1px solid rgb(124, 11, 11);
-        padding: 50px;
-        font-size: clamp(.8rem, 1.5vw, 2.5rem);
-        font-weight: lighter;
-        text-transform: capitalize;
-        position: relative;
+  & h2 {
+    padding: 35px 30px;
+    font-size: clamp(2rem, 3.5vw, 6rem);
+    font-weight: bold;
+  }
+}
+//CITATION
+blockquote {
+  font-style: italic;
+  line-height: 45px;
+  padding: 20px 70px 50px;
 
-        &::before{
-            content: "";
-            position: absolute;
-            border: 1px solid gray;
-            width: 31%;
-            top: 50%;
-            left: 5%;
-        }
-
-        &::after{
-            content: "";
-            position: absolute;
-            border: 1px solid gray;
-            width: 31%;
-            top: 50%;
-            right: 5%;
-        }
-    }
-
-    & h2{
-        padding: 50px;
-        font-size: clamp(1rem, 4vw, 5rem);
+  & p {
+    font-size: clamp(0.8rem, 1.5vw, 1.6rem);
+  }
+}
+//IMAGE
+.img-center {
+  background: url(../../../assets/images/pic01.jpg) no-repeat center/cover;
+  width: 90%;
+  height: 80vh;
+  margin: 0 auto;
+}
+//BUTTON
+.section1{
+    .btn{
+        margin: 50px;
     }
 }

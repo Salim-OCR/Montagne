@@ -24,7 +24,7 @@ a:visited {
 }
 
 section {
-  background: rgb(239, 234, 234);
+  background: whitesmoke;
 }
 
 .btn {
@@ -44,21 +44,21 @@ section {
   background: rgb(22, 22, 22);
   position: absolute;
   top: 0;
-  left: -100%;
-  transform: translate(-50% 50%);
-  z-index: -1;
+  left: 0;
+  transform: translate(100%);
   transition: 0.5s ease;
 }
 .btn:hover {
   color: rgb(239, 234, 234);
+  z-index: 0;
 }
 .btn:hover::after {
   content: "";
   height: 100%;
   width: 100%;
-  background: rgb(22, 22, 22);
   position: absolute;
   left: -100%;
+  background: rgb(22, 22, 22);
   transform: translate(100%);
   z-index: -1;
 }
@@ -175,44 +175,60 @@ nav {
   color: rgb(22, 22, 22);
 }
 
-.section1 {
-  height: 120vh;
-  border: 1px solid red;
-}
-
-.txt-up {
-  width: 85%;
-  margin: 0 auto;
-  border: 1px solid rgb(93, 0, 255);
-}
-.txt-up #txt-barre {
+#txt-barre {
   width: 100%;
-  border: 1px solid rgb(124, 11, 11);
-  padding: 50px;
+  padding: 50px 0 0;
+  margin-bottom: 50px;
   font-size: clamp(0.8rem, 1.5vw, 2.5rem);
   font-weight: lighter;
   text-transform: capitalize;
   position: relative;
 }
-.txt-up #txt-barre::before {
+#txt-barre::before {
   content: "";
   position: absolute;
-  border: 1px solid gray;
-  width: 31%;
-  top: 50%;
-  left: 5%;
+  border: 1px solid rgba(229, 229, 229, 0.637);
+  width: 30%;
+  top: 80%;
+  left: 8%;
 }
-.txt-up #txt-barre::after {
+#txt-barre::after {
   content: "";
   position: absolute;
-  border: 1px solid gray;
-  width: 31%;
-  top: 50%;
-  right: 5%;
+  border: 1px solid rgba(229, 229, 229, 0.637);
+  width: 30%;
+  top: 80%;
+  right: 8%;
+}
+
+.txt-up {
+  width: 60%;
+  margin: 0 auto;
 }
 .txt-up h2 {
-  padding: 50px;
-  font-size: clamp(1rem, 4vw, 5rem);
+  padding: 35px 30px;
+  font-size: clamp(2rem, 3.5vw, 6rem);
+  font-weight: bold;
+}
+
+blockquote {
+  font-style: italic;
+  line-height: 45px;
+  padding: 20px 70px 50px;
+}
+blockquote p {
+  font-size: clamp(0.8rem, 1.5vw, 1.6rem);
+}
+
+.img-center {
+  background: url(../../../assets/images/pic01.jpg) no-repeat center/cover;
+  width: 90%;
+  height: 80vh;
+  margin: 0 auto;
+}
+
+.section1 .btn {
+  margin: 50px;
 }
 
 body {
