@@ -1,0 +1,42 @@
+.section1{
+    height: 120vh;
+    border: 1px solid red;
+}
+.txt-up{
+    width: 85%;
+    margin: 0 auto;
+    border: 1px solid rgb(93, 0, 255);
+
+    & #txt-barre{
+        width: 100%;
+        border: 1px solid rgb(124, 11, 11);
+        padding: 50px;
+        font-size: clamp(.8rem, 1.5vw, 2.5rem);
+        font-weight: lighter;
+        text-transform: capitalize;
+        position: relative;
+
+        &::before{
+            content: "";
+            position: absolute;
+            border: 1px solid gray;
+            width: 31%;
+            top: 50%;
+            left: 5%;
+        }
+
+        &::after{
+            content: "";
+            position: absolute;
+            border: 1px solid gray;
+            width: 31%;
+            top: 50%;
+            right: 5%;
+        }
+    }
+
+    & h2{
+        padding: 50px;
+        font-size: clamp(1rem, 4vw, 5rem);
+    }
+}

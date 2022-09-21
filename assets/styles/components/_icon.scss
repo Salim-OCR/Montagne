@@ -1,0 +1,9 @@
+i {
+    width: 30px;
+    height: 30px;
+    font-size: clamp(1rem, 1.3vw, 1.4rem);
+  
+    &:hover {
+      font-size: clamp(0.9rem, 1.45vw, 1.5rem);
+    }
+  }

@@ -23,6 +23,55 @@ a:visited {
   color: black;
 }
 
+section {
+  background: rgb(239, 234, 234);
+}
+
+.btn {
+  padding: 10px 25px;
+  border: 2px solid rgb(22, 22, 22);
+  background: transparent;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.btn::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: rgb(22, 22, 22);
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transform: translate(-50% 50%);
+  z-index: -1;
+  transition: 0.5s ease;
+}
+.btn:hover {
+  color: rgb(239, 234, 234);
+}
+.btn:hover::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: rgb(22, 22, 22);
+  position: absolute;
+  left: -100%;
+  transform: translate(100%);
+  z-index: -1;
+}
+
+i {
+  width: 30px;
+  height: 30px;
+  font-size: clamp(1rem, 1.3vw, 1.4rem);
+}
+i:hover {
+  font-size: clamp(0.9rem, 1.45vw, 1.5rem);
+}
+
 header {
   height: 90vh;
   display: flex;
@@ -72,7 +121,7 @@ header {
 }
 
 nav {
-  border: 1px solid red;
+  height: 10vh;
   display: flex;
   justify-content: space-between;
   background: rgba(229, 229, 229, 0.637);
@@ -80,19 +129,15 @@ nav {
 }
 
 .nav-left {
-  border: 1px solid black;
   width: 50%;
-  height: 10vh;
   transition: 0.5s ease;
 }
 .nav-left:hover li:not(:hover) {
   background: rgba(229, 229, 229, 0.637);
   color: rgb(239, 234, 234);
 }
-
 .nav-left ul {
   height: 100%;
-  border: 1px solid black;
   display: flex;
   font-size: clamp(0.5rem, 1.1vw, 1.2rem);
   font-weight: 600;
@@ -100,7 +145,6 @@ nav {
 }
 .nav-left ul li {
   width: 100%;
-  border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,6 +156,63 @@ nav {
 .nav-left ul li:hover {
   background: rgb(239, 234, 234);
   color: rgb(22, 22, 22);
+}
+
+.nav-right {
+  width: 400px;
+  transition: 0.3s ease;
+}
+.nav-right ul {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav-right ul i {
+  color: rgb(239, 234, 234);
+}
+.nav-right ul i:hover {
+  color: rgb(22, 22, 22);
+}
+
+.section1 {
+  height: 120vh;
+  border: 1px solid red;
+}
+
+.txt-up {
+  width: 85%;
+  margin: 0 auto;
+  border: 1px solid rgb(93, 0, 255);
+}
+.txt-up #txt-barre {
+  width: 100%;
+  border: 1px solid rgb(124, 11, 11);
+  padding: 50px;
+  font-size: clamp(0.8rem, 1.5vw, 2.5rem);
+  font-weight: lighter;
+  text-transform: capitalize;
+  position: relative;
+}
+.txt-up #txt-barre::before {
+  content: "";
+  position: absolute;
+  border: 1px solid gray;
+  width: 31%;
+  top: 50%;
+  left: 5%;
+}
+.txt-up #txt-barre::after {
+  content: "";
+  position: absolute;
+  border: 1px solid gray;
+  width: 31%;
+  top: 50%;
+  right: 5%;
+}
+.txt-up h2 {
+  padding: 50px;
+  font-size: clamp(1rem, 4vw, 5rem);
 }
 
 body {

@@ -1,8 +1,11 @@
 //IMPORTATIONS DE FICHIERS SASS
-@import './settings/fondationts';
 @import './utils/variables';
+@import './settings/fondationts';
 @import './utils/mixins';
+@import './components/boutton';
+@import './components/icon';
 @import './layout/header';
+@import './layout/section1';
 
 //Paramètre du body
 body{

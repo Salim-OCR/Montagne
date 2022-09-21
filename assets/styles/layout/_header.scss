@@ -44,28 +44,23 @@ header {
 
 //NAV
 nav {
-  border: 1px solid red;
+  height: 10vh;
   @include flex-between;
   background: $color-3;
   color: $color-1;
 }
-
+//NAV LEFT
 .nav-left {
-  border: 1px solid black;
   width: 50%;
-  height: 10vh;
   transition: 0.5s ease;
 
   &:hover li:not(:hover){
     background: $color-3;
     color: $color-1;
   }
-}
 
-.nav-left{
   & ul {
     height: 100%;
-    border: 1px solid black;
     display: flex;
     font-size: clamp(0.5rem, 1.1vw, 1.2rem);
     font-weight: 600;
@@ -73,7 +68,6 @@ nav {
 
     & li {
       width: 100%;
-      border: 1px solid black;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -85,6 +79,26 @@ nav {
 
       &:hover {
         background: $color-1;
+        color: $color-2;
+      }
+    }
+  }
+}
+//NAV RIGHT
+.nav-right{
+  width: 400px;
+  transition: 0.3s ease;
+
+  & ul{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    i {
+      color: $color-1;
+      
+      &:hover{
         color: $color-2;
       }
     }
