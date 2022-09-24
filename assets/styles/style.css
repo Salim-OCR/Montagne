@@ -14,6 +14,7 @@ h3,
 .nav-left,
 button,
 label,
+.form-left input[type=text],
 input[type=button] {
   text-transform: uppercase;
 }
@@ -112,12 +113,13 @@ header {
   position: relative;
 }
 .icon-header i {
+  height: auto;
   color: rgb(239, 234, 234);
   font-size: clamp(0.9rem, 1vw, 1.1rem);
   position: absolute;
   top: 50%;
   left: 50%;
-  translate: -50% -50%;
+  transform: translate(-50%, -50%);
 }
 
 nav {
@@ -231,9 +233,168 @@ blockquote p {
   margin: 50px;
 }
 
+.container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.container .date {
+  font-size: clamp(0.8rem, 1.1vw, 1.5rem);
+  font-weight: lighter;
+  text-transform: capitalize;
+  padding: 10px 0px 20px;
+}
+.container h3 {
+  font-size: clamp(1rem, 1.4vw, 1.5rem);
+  font-weight: lighter;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+.container .btn {
+  margin: 25px auto;
+}
+
+.left, .right {
+  border-top: 1px solid gray;
+  border-right: 1px solid gray;
+  padding: 40px;
+}
+.left .img-left, .right .img-left, .right .img-right {
+  background: url(../../../assets/images/pic02.jpg) center/cover;
+  height: 40vh;
+  margin: 30px auto;
+}
+
+.right {
+  border-right: none;
+}
+.right .img-right {
+  background: url(../../../assets/images/pic03.jpg);
+}
+
+footer {
+  background: rgb(244, 243, 243);
+  margin: 15px auto 50px;
+}
+footer label, footer .form-left input[type=text], .form-left footer input[type=text] {
+  color: rgb(143, 144, 147);
+  font-weight: lighter;
+  font-size: clamp(0.6rem, 0.9vw, 0.9rem);
+}
+footer form {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  cursor: auto;
+  transition: 0.2s ease;
+}
+
+.form-left {
+  border-right: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px;
+}
+.form-left label, .form-left input[type=text] {
+  margin-bottom: 20px;
+}
+.form-left input[type=text] {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 5px;
+  text-transform: lowercase;
+}
+.form-left input[type=text]:focus {
+  border: 1px solid rgba(91, 196, 55, 0.796);
+}
+.form-left textarea {
+  width: 100%;
+  height: 200px;
+  background: transparent;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  resize: none;
+  text-transform: capitalize;
+}
+.form-left textarea:focus {
+  border: 1px solid rgba(91, 196, 55, 0.796);
+}
+.form-left input[type=button] {
+  border: 1px solid gray;
+  color: rgb(143, 144, 147);
+  transition: 0.2s ease;
+}
+.form-left input[type=button]:hover {
+  background: #cfc927;
+  background: repeating-linear-gradient(to right, #cfc927 0%, #44cf4e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.form-left input[type=button]:active {
+  background: #1bac46;
+  box-shadow: inset 11px 11px 22px #d2eeda, inset -11px -11px 22px #57bb78;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form-right {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.form-right .form-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-style: inset;
+}
+.form-right .form-info label, .form-right .form-info .form-left input[type=text], .form-left .form-right .form-info input[type=text] {
+  padding: 30px;
+}
+.form-right .form-info input {
+  width: 80%;
+  height: 60px;
+  margin: 0 auto;
+  padding: 50px;
+  background: transparent;
+  outline: none;
+  border: none;
+  font-size: clamp(0.9rem, 1.1vw, 1.3rem);
+}
+.form-right .links-social {
+  width: 33%;
+  margin-right: 300px;
+}
+.form-right .links-social ul {
+  display: flex;
+  justify-content: space-between;
+}
+.form-right .links-social ul li {
+  width: 45px;
+  height: 45px;
+  border: 1px solid;
+  border-radius: 50px;
+  position: relative;
+}
+.form-right .links-social ul li a {
+  position: absolute;
+  top: 10px;
+  left: 6.5px;
+}
+.form-right .links-social ul li a i:hover {
+  color: skyblue;
+}
+
 body {
   width: 75%;
   margin: 0 auto;
   background: url(../images/bg.jpg) fixed center/cover;
   text-align: center;
+  font-family: "Inter", sans-serif;
+}
+body p {
+  font-family: "Merriweather", serif;
 }/*# sourceMappingURL=style.css.map */

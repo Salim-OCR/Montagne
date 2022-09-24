@@ -11,6 +11,12 @@
       src="https://kit.fontawesome.com/5e70f60eb5.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Merriweather:wght@300&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- TITLE -->
     <title>La montagne</title>
@@ -85,8 +91,8 @@
     <section>
       <div class="container">
         <div class="left">
-          <p>april 24,2017</p>
-          <h3>sed magna ipsum faucibus</h3>
+          <p class="date">april 24,2017</p>
+          <h3>sed magna <br> ipsum faucibus</h3>
           <div class="img-left"></div>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
@@ -97,8 +103,8 @@
           <button class="btn">full story</button>
         </div>
         <div class="right">
-          <p>april 22,2017</p>
-          <h3>sed magna ipsum faucibus</h3>
+          <p class="date">april 22,2017</p>
+          <h3>sed magna <br> ipsum faucibus</h3>
           <div class="img-right"></div>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
@@ -118,7 +124,7 @@
           <label for="name">name</label>
           <input type="text" id="name" />
           <label for="email">email</label>
-          <input type="email" class="email" />
+          <input type="text" class="email" />
           <label for="message">message</label>
           <textarea name="message" id="message"></textarea>
           <input class="btn" type="button" value="SEND MESSAGE" />
@@ -144,10 +150,10 @@
           </div>
           <div class="form-info">
             <label for="email">email</label>
-            <input type="email" name="email" id="email" />
+            <input type="email" name="email" id="email" placeholder="info@email.com"/>
           </div>
           <div class="form-info">
-            <label for="social">social</label>
+            <label id="social">social</label>
             <div class="links-social">
               <ul>
                 <li>

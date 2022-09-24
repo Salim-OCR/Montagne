@@ -6,6 +6,8 @@
 @import './components/icon';
 @import './layout/header';
 @import './layout/section1';
+@import './layout/section2';
+@import './layout/footer';
 
 //Paramètre du body
 body{
@@ -13,4 +15,9 @@ body{
     margin: 0 auto;
     background: url(../images/bg.jpg) fixed center/cover;
     text-align: center;
+    font-family: 'Inter', sans-serif;
+
+    & p{
+        font-family: 'Merriweather', serif;
+    }
 }

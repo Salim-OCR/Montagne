@@ -1,0 +1,46 @@
+//CONTENER
+.container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+
+  & .date {
+    font-size: clamp(0.8rem, 1.1vw, 1.5rem);
+    font-weight: lighter;
+    text-transform: capitalize;
+    padding: 10px 0px 20px;
+  }
+
+  & h3 {
+    font-size: clamp(1rem, 1.4vw, 1.5rem);
+    font-weight: lighter;
+    line-height: 40px;
+    letter-spacing: 2px;
+  }
+
+  & .btn{
+    margin: 25px auto;
+  }
+}
+//CONTAINER GAUCHE
+.left {
+  border-top: 1px solid gray;
+  border-right: 1px solid gray;
+  padding: 40px;
+
+  & .img-left {
+    background: url(../../../assets/images/pic02.jpg) center/cover;
+    height: 40vh;
+    margin: 30px auto;
+  }
+}
+
+//CONTAINER DROIT
+.right {
+  @extend .left;
+  border-right: none;
+
+  & .img-right {
+    @extend .img-left;
+    background: url(../../../assets/images/pic03.jpg);
+  }
+}
