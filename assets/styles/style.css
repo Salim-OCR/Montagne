@@ -85,7 +85,7 @@ header {
   color: rgb(239, 234, 234);
 }
 .main-header h1 {
-  font-size: clamp(3rem, 5vw, 9rem);
+  font-size: clamp(2.5rem, 5vw, 9rem);
   padding: 90px 0 0px;
   font-weight: bold;
 }
@@ -134,6 +134,11 @@ nav {
   width: 50%;
   transition: 0.5s ease;
 }
+@media screen and (max-width: 900px) {
+  .nav-left {
+    width: 100%;
+  }
+}
 .nav-left:hover li:not(:hover) {
   background: rgba(229, 229, 229, 0.637);
   color: rgb(239, 234, 234);
@@ -163,6 +168,11 @@ nav {
 .nav-right {
   width: 400px;
   transition: 0.3s ease;
+}
+@media screen and (max-width: 900px) {
+  .nav-right {
+    display: none;
+  }
 }
 .nav-right ul {
   height: 100%;
@@ -203,13 +213,24 @@ nav {
   right: 8%;
 }
 
+@media screen and (max-width: 900px) {
+  #txt-barre::before,
+#txt-barre::after {
+    width: 24%;
+  }
+}
 .txt-up {
   width: 60%;
   margin: 0 auto;
 }
+@media screen and (max-width: 900px) {
+  .txt-up {
+    width: 100%;
+  }
+}
 .txt-up h2 {
   padding: 35px 30px;
-  font-size: clamp(2rem, 3.5vw, 6rem);
+  font-size: clamp(1.5rem, 3.5vw, 6rem);
   font-weight: bold;
 }
 
@@ -221,12 +242,24 @@ blockquote {
 blockquote p {
   font-size: clamp(0.8rem, 1.5vw, 1.6rem);
 }
+@media screen and (max-width: 900px) {
+  blockquote {
+    padding: 20px auto;
+  }
+}
 
 .img-center {
   background: url(../../../assets/images/pic01.jpg) no-repeat center/cover;
   width: 90%;
   height: 80vh;
   margin: 0 auto;
+}
+@media screen and (max-width: 900px) {
+  .img-center {
+    -o-object-fit: contain;
+       object-fit: contain;
+    height: 50vh;
+  }
 }
 
 .section1 .btn {
@@ -243,6 +276,11 @@ blockquote p {
   text-transform: capitalize;
   padding: 10px 0px 20px;
 }
+@media screen and (max-width: 900px) {
+  .container .date {
+    text-align: center;
+  }
+}
 .container h3 {
   font-size: clamp(1rem, 1.4vw, 1.5rem);
   font-weight: lighter;
@@ -253,6 +291,15 @@ blockquote p {
   margin: 25px auto;
 }
 
+@media screen and (max-width: 900px) {
+  .container {
+    display: block;
+  }
+  .container p {
+    text-align: left;
+    line-height: 40px;
+  }
+}
 .left, .right {
   border-top: 1px solid gray;
   border-right: 1px solid gray;
@@ -271,6 +318,14 @@ blockquote p {
   background: url(../../../assets/images/pic03.jpg);
 }
 
+@media screen and (max-width: 900px) {
+  .left, .right {
+    border-right: none;
+  }
+  .right {
+    border: none;
+  }
+}
 footer {
   background: rgb(244, 243, 243);
   margin: 15px auto 50px;
@@ -293,6 +348,11 @@ footer form {
   flex-direction: column;
   align-items: flex-start;
   padding: 30px;
+}
+@media screen and (max-width: 900px) {
+  .form-left {
+    border-right: none;
+  }
 }
 .form-left label, .form-left input[type=text] {
   margin-bottom: 20px;
@@ -332,12 +392,14 @@ footer form {
   background: #cfc927;
   background: repeating-linear-gradient(to right, #cfc927 0%, #44cf4e 100%);
   -webkit-background-clip: text;
+          background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .form-left input[type=button]:active {
   background: #1bac46;
   box-shadow: inset 11px 11px 22px #d2eeda, inset -11px -11px 22px #57bb78;
   -webkit-background-clip: text;
+          background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -350,6 +412,13 @@ footer form {
   justify-content: space-between;
   align-items: center;
   border-bottom-style: inset;
+  overflow: hidden;
+}
+@media screen and (max-width: 900px) {
+  .form-right .form-info {
+    overflow: hidden;
+    border-bottom-style: none;
+  }
 }
 .form-right .form-info label, .form-right .form-info .form-left input[type=text], .form-left .form-right .form-info input[type=text] {
   padding: 30px;
@@ -362,11 +431,23 @@ footer form {
   background: transparent;
   outline: none;
   border: none;
-  font-size: clamp(0.9rem, 1.1vw, 1.3rem);
+  font-size: clamp(0.8rem, 1.1vw, 1.3rem);
+}
+@media screen and (max-width: 900px) {
+  .form-right .form-info input {
+    width: 100%;
+    padding: 0;
+  }
 }
 .form-right .links-social {
   width: 33%;
   margin-right: 300px;
+}
+@media screen and (max-width: 900px) {
+  .form-right .links-social {
+    width: 100%;
+    margin-right: 50px;
+  }
 }
 .form-right .links-social ul {
   display: flex;

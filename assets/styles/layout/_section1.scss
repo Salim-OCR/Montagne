@@ -26,14 +26,24 @@
     right: 8%;
   }
 }
+@media screen and (max-width: 900px) {
+  #txt-barre::before,
+  #txt-barre::after {
+    width: 24%;
+  }
+}
 //H2
 .txt-up {
   width: 60%;
   margin: 0 auto;
 
+  @media screen and (max-width:900px) {
+    width: 100%;
+  }
+
   & h2 {
     padding: 35px 30px;
-    font-size: clamp(2rem, 3.5vw, 6rem);
+    font-size: clamp(1.5rem, 3.5vw, 6rem);
     font-weight: bold;
   }
 }
@@ -46,17 +56,27 @@ blockquote {
   & p {
     font-size: clamp(0.8rem, 1.5vw, 1.6rem);
   }
+
+  @media screen and (max-width: 900px) {
+    padding: 20px auto;
+  }
 }
+
 //IMAGE
 .img-center {
   background: url(../../../assets/images/pic01.jpg) no-repeat center/cover;
   width: 90%;
   height: 80vh;
   margin: 0 auto;
+
+  @media screen and (max-width:900px) {
+    object-fit: contain;
+    height: 50vh;
+  }
 }
 //BUTTON
-.section1{
-    .btn{
-        margin: 50px;
-    }
+.section1 {
+  .btn {
+    margin: 50px;
+  }
 }

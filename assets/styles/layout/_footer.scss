@@ -23,11 +23,15 @@ footer {
   align-items: flex-start;
   padding: 30px;
 
-  & label {
+  @media screen and (max-width: 900px) {
+    border-right: none;
+  }
+
+  label {
     margin-bottom: 20px;
   }
 
-  & input[type="text"] {
+  input[type="text"] {
     @extend label;
     width: 100%;
     height: 40px;
@@ -58,7 +62,7 @@ footer {
     }
   }
 
-  & input[type="button"] {
+  input[type="button"] {
     border: 1px solid gray;
     color: rgb(143, 144, 147);
     transition: 0.2s ease;
@@ -66,14 +70,14 @@ footer {
     &:hover {
       background: #cfc927;
       background: repeating-linear-gradient(to right, #cfc927 0%, #44cf4e 100%);
-      -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     &:active {
       background: #1bac46;
       box-shadow: inset 11px 11px 22px #d2eeda, inset -11px -11px 22px #57bb78;
-      -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
     }
   }
@@ -82,19 +86,24 @@ footer {
 .form-right {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  //   padding: 0 30px;
 
-  & .form-info {
+  .form-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom-style: inset;
+    overflow: hidden;
 
-    & label {
+    @media screen and (max-width: 900px) {
+      overflow: hidden;
+      border-bottom-style: none;
+    }
+
+    label {
       padding: 30px;
     }
 
-    & input {
+    input {
       width: 80%;
       height: 60px;
       margin: 0 auto;
@@ -102,20 +111,30 @@ footer {
       background: transparent;
       outline: none;
       border: none;
-      font-size: clamp(0.9rem, 1.1vw, 1.3rem);
+      font-size: clamp(0.8rem, 1.1vw, 1.3rem);
+
+      @media screen and (max-width: 900px) {
+        width: 100%;
+        padding: 0;
+      }
     }
   }
 
   //LInk SOCIal
-  & .links-social {
+  .links-social {
     width: 33%;
     margin-right: 300px;
 
-    & ul {
+    @media screen and (max-width: 900px) {
+      width: 100%;
+      margin-right: 50px;
+    }
+
+    ul {
       display: flex;
       justify-content: space-between;
 
-      & li {
+      li {
         width: 45px;
         height: 45px;
         border: 1px solid;

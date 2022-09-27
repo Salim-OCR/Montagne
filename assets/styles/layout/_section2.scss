@@ -8,6 +8,10 @@
     font-weight: lighter;
     text-transform: capitalize;
     padding: 10px 0px 20px;
+
+    @media screen and (max-width:900px) {
+      text-align: center;
+    }
   }
 
   & h3 {
@@ -17,8 +21,19 @@
     letter-spacing: 2px;
   }
 
-  & .btn{
+  & .btn {
     margin: 25px auto;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    display: block;
+
+    p{
+      text-align: left;
+      line-height: 40px;
+    }
   }
 }
 //CONTAINER GAUCHE
@@ -42,5 +57,13 @@
   & .img-right {
     @extend .img-left;
     background: url(../../../assets/images/pic03.jpg);
+  }
+}
+@media screen and (max-width: 900px) {
+  .left {
+    border-right: none;
+  }
+  .right {
+    border: none;
   }
 }
