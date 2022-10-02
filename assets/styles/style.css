@@ -249,7 +249,7 @@ blockquote p {
 }
 
 .img-center {
-  background: url(../../../assets/images/pic01.jpg) no-repeat center/cover;
+  background: url("../images/pic01.jpg") no-repeat center/cover;
   width: 90%;
   height: 80vh;
   margin: 0 auto;
@@ -306,7 +306,7 @@ blockquote p {
   padding: 40px;
 }
 .left .img-left, .right .img-left, .right .img-right {
-  background: url(../../../assets/images/pic02.jpg) center/cover;
+  background: url(../images/pic02.jpg) center/cover;
   height: 40vh;
   margin: 30px auto;
 }
@@ -315,7 +315,7 @@ blockquote p {
   border-right: none;
 }
 .right .img-right {
-  background: url(../../../assets/images/pic03.jpg);
+  background: url(../images/pic03.jpg);
 }
 
 @media screen and (max-width: 900px) {
@@ -472,7 +472,7 @@ footer form {
 body {
   width: 75%;
   margin: 0 auto;
-  background: url(../images/bg.jpg) fixed center/cover;
+  background: url("../images/bg.jpg") fixed center/cover;
   text-align: center;
   font-family: "Inter", sans-serif;
 }
